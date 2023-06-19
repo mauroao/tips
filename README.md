@@ -26,6 +26,25 @@
 | `%LOCALAPPDATA%`| Path to the current user's local AppData folder         |
 | `shell:startup` | AppData\Roaming/Microsoft/Windows/Start Menu/Programs/Startup folder |
 
+| Shortcut                     | Program                                     |
+|------------------------------|---------------------------------------------|
+| `control`                    | Control Panel                               |
+| `sysdm.cpl`                  | System Properties                           |
+| `ncpa.cpl`                   | Network Connections                         |
+| `appwiz.cpl`                 | Programs and Features                       |
+| `desk.cpl`                   | Display Properties                          |
+| `firewall.cpl`               | Windows Firewall                            |
+| `inetcpl.cpl`                | Internet Options                            |
+| `timedate.cpl`               | Date and Time                               |
+| `mmsys.cpl`                  | Sound                                       |
+| `powercfg.cpl`               | Power Options                               |
+| `devmgmt.msc`                | Device Manager                              |
+| `compmgmt.msc`               | Computer Management                         |
+| `services.msc`               | Services                                    |
+| `taskmgr`                    | Task Manager                                |
+
+
+
 
 ## :white_check_mark: Linux
 
