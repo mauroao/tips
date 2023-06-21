@@ -248,3 +248,12 @@ https://www.youtube.com/watch?v=X-E7syOcPEE
 https://coderwall.com/p/7smjkq/multiple-ssh-keys-for-different-accounts-on-github-or-gitlab  
 
 find ./* | xargs xattr -r -d com.apple.quarantine
+
+
+**Dica do Akita**
+
+```PowerShell
+wmic diskdrive list brief
+wls --mount \\.\PHYSICALDRIVE1
+```
+
