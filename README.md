@@ -252,8 +252,12 @@ find ./* | xargs xattr -r -d com.apple.quarantine
 
 **Dica do Akita**
 
+As Administrator!!!!
+
 ```PowerShell
 wmic diskdrive list brief
-wls --mount \\.\PHYSICALDRIVE1
+```
+```PowerShell
+wsl --mount \\.\PHYSICALDRIVE1
 ```
 
