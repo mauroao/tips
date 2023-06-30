@@ -73,6 +73,17 @@ sudo systemctl status docker.service
 
 ## :white_check_mark: Comandos de Terminal em Windows e Linux
 
+
+| Command Description | Mac | Linux | PowerShell |
+|---------------------|-----|-------|------------|
+| Show all environment variables | `echo $ENV` | `printenv` | `$env` |
+| Show one environment variable | `echo $ENV_VAR` | `echo $ENV_VAR` | `$env:ENV_VAR` |
+| Change an environment variable | `export ENV_VAR=new_value` | `export ENV_VAR=new_value` | `$env:ENV_VAR = "new_value"` |
+| Add a new environment variable | `export NEW_VAR=value` | `export NEW_VAR=value` | `$env:NEW_VAR = "value"` |
+| Replace the value of an environment variable | `export ENV_VAR=new_value` | `export ENV_VAR=new_value` | `$env:ENV_VAR = "new_value"` |
+| Print the value of an environment variable | `echo $ENV_VAR` | `echo $ENV_VAR` | `echo $env:ENV_VAR` |
+ 
+ 
 | Comando | Linux / Mac | cmd or Powershell |
 | ------- | ----- | ------- |
 | AND operator (vários comandos) | `&&` | `&&` |
