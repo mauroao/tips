@@ -74,11 +74,11 @@ sudo systemctl status docker.service
 ## :white_check_mark: Comandos de Terminal em Windows e Linux
 
 
-| Command Description              | Mac                    | Linux                   | PowerShell               |
-|----------------------------------|------------------------|-------------------------|--------------------------|
-| Show all environment variables   | `echo $ENV`            | `printenv`              | `dir env:`               |
-| Show one environment variable    | `echo $ENV_VAR`        | `echo $ENV_VAR`         | `dir env:JAVA_HOME`      |
-| Add a new environment variable   | `export NEW_VAR=value` | `export NEW_VAR=value`  | `$env:NEW_VAR = "value"` |
+| ENV vars   | Mac                    | Linux                   | PowerShell               |
+|------------|------------------------|-------------------------|--------------------------|
+| Show all   | `echo $ENV`            | `printenv`              | `dir env:`               |
+| Show one   | `echo $ENV_VAR`        | `echo $ENV_VAR`         | `dir env:JAVA_HOME`      |
+| Add new    | `export NEW_VAR=value` | `export NEW_VAR=value`  | `$env:NEW_VAR = "value"` |
  
  
 | Comando | Linux / Mac | cmd or Powershell |
