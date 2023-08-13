@@ -128,14 +128,14 @@ sudo systemctl status docker.service
 
 | Objetivo | Comando |
 | -------- | ------- |
-| Criar container | `docker container create -it --name dotnet31 --privileged -v c:\temp:/home mcr.microsoft.com/dotnet/core/runtime:3.1 /bin/bash` |
+| Criar container | `docker container create -it --name 31 --privileged -v c:\temp:/home mcr.microsoft.com//core/runtime:3.1 /bin/bash` |
 | Listar containers | `docker container list --all` |
-| Iniciar container | `docker container start dotnet31` |
-| Copiar arquivos para container | `docker cp bin/. dotnet31:home/bin` |
-| Conectar em um container | `docker container exec -it dotnet31 /bin/bash` |
-| Acompanhar logs | `docker logs --follow dotnet31` |
-| Parar container | `docker container stop dotnet31` |
-| Remover container | `docker container rm dotnet31` |
+| Iniciar container | `docker container start 31` |
+| Copiar arquivos para container | `docker cp bin/. 31:home/bin` |
+| Conectar em um container | `docker container exec -it 31 /bin/bash` |
+| Acompanhar logs | `docker logs --follow 31` |
+| Parar container | `docker container stop 31` |
+| Remover container | `docker container rm 31` |
 | Remover containers parados | `docker container prune` |
 | Limpar tudo (!!!!) | `docker system prune --all` |
 
@@ -150,7 +150,7 @@ Exemplo de docker-compose.yml "iterativo":
 version: "3"
 services:
   service1:
-    image: mcr.microsoft.com/dotnet/core/runtime:3.1
+    image: mcr.microsoft.com//core/runtime:3.1
     stdin_open: true
     tty: true
     command: "/bin/bash"
@@ -166,6 +166,7 @@ docker volume prune
 ```bash
 dotnet publish --configuration release --runtime linux-x64
 dotnet publish --configuration release --runtime osx-x64 --self-contained true -p:PublishSingleFile=true
+dotnet nuget locals all --clear
 ```
 
 ## :white_check_mark: Configuração do VS Code
@@ -272,3 +273,8 @@ wsl --mount \\.\PHYSICALDRIVE1
 ```
 echo $env:JAVA_HOME
 ```
+
+```
+dotnet nuget locals all --clear
+```
+
