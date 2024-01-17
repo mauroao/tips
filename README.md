@@ -65,6 +65,18 @@ sudo systemctl disable docker.service
 sudo systemctl status docker.service
 ```
 
+### SCP (copy files over ssh)
+
+To copy a file from B to A while logged into B:
+```
+scp /path/to/file username@a:/path/to/destination
+```
+
+To copy a file from B to A while logged into A:
+```
+scp username@b:/path/to/file /path/to/destination
+```
+
 ## :white_check_mark: Sintaxes de comandos nas linguagens que utilizo
 
 | Comando | C# | Node | Python
