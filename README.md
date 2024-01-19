@@ -77,6 +77,14 @@ To copy a file from B to A while logged into A:
 scp username@b:/path/to/file /path/to/destination
 ```
 
+### CHMOD
+
+Add read/write permissions recursivelly for all groups in all files/folders:
+
+```
+sudo chmod -R a+rw /path/to/folder
+```
+
 ## :white_check_mark: Sintaxes de comandos nas linguagens que utilizo
 
 | Comando | C# | Node | Python
