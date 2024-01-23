@@ -222,6 +222,17 @@ Configurar o settings.json (CTRL + SHIFT + P) - Preferences - Open Settings:
 
 ## :white_check_mark: Temp (catalogar depois...)
 
+Subnet CIDR examples:
+
++--------+-----------------+
+| CIDR   | Subnet Mask     |
++--------+-----------------+
+| /32    | 255.255.255.255 |
+| /24    | 255.255.255.0   |
+| /16    | 255.255.0.0     |
+| /8     | 255.0.0.0       |
++--------+-----------------+
+
 **Atalhos do Windows**:
 
 - Network connections => Win+R ncpa.cpl
