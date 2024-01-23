@@ -224,6 +224,7 @@ Configurar o settings.json (CTRL + SHIFT + P) - Preferences - Open Settings:
 
 Subnet CIDR examples:
 
+```
 +--------+-----------------+
 | CIDR   | Subnet Mask     |
 +--------+-----------------+
@@ -232,6 +233,7 @@ Subnet CIDR examples:
 | /16    | 255.255.0.0     |
 | /8     | 255.0.0.0       |
 +--------+-----------------+
+```
 
 **Atalhos do Windows**:
 
