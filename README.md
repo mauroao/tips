@@ -114,7 +114,7 @@ sudo chmod -R a+rw /path/to/folder
 | Flush DNS | `sudo killall -HUP mDNSResponder; say dns cleared` (mac) <br>`sudo /etc/init.d/networking restart` linux | `ipconfig /flushdns` |
 | Watch file | `tail -f /var/log/syslog` | `Get-Content -Path "C:\scripts\test.txt" -Wait` |
 | remove all | `rm -rf folder` | `Remove-Item -Force -Recurse folder` | 
-| create file | `touch file.txt` | `echo > file.txt` |
+| create file | `touch file.txt` | `New-Item file.txt` |
 
 ## :white_check_mark: Git (exemplos)
 
