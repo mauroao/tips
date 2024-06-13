@@ -48,6 +48,12 @@
 
 ## :white_check_mark: Linux
 
+### Listar top 10 comandos com maior uso de cpu
+
+```
+ps -eo pid,comm,pcpu --sort=-pcpu | head -n 4
+```
+
 ### Serviços (exemplos de comandos)
 
 ```
