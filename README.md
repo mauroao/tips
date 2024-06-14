@@ -51,7 +51,7 @@
 ### Listar top 10 comandos com maior uso de cpu
 
 ```
-ps -eo pid,comm,pcpu --sort=-pcpu | head -n 4
+ps -A --format=pcpu,args --sort=-pcpu | head -n 11 | cut -c 1-100
 ```
 
 ### Serviços (exemplos de comandos)
