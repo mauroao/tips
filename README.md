@@ -112,7 +112,7 @@ sudo chmod -R a+rw /path/to/folder
 | AND operator (vários comandos) | `&&` | `&&` |
 | Line Break (útil para linhas muito grandes) | `\` | `^` para cmd e 'backtick' para powershell |
 | Exibir caminho de app no path | `which` | `where` |
-| Localizar arquivo | `find ./ -iname "*teste*"` | `dir /s teste.txt` |
+| Localizar arquivo | `find ./ -iname "*teste*"` | `dir -Recurse teste.txt` |
 | Variáveis de ambiente | `env` <br> `export VAR1=teste` <br> `echo $VAR1` | `set` <br> `set VAR1=teste` <br> `echo %VAR1%` <br> `Get-ChildItem Env:VAR1` <br> `Set-Item -Path Env:VAR1 -Value "teste"`
 | Persistir variáveis de ambiente | `/etc/enviromment` <br> `~/.bachrc` <br> `/etc/profile` | Windows + R,<br> type: `rundll32 sysdm.cpl,EditEnvironmentVariables` <br> or, type: `SETX FOO BAR` |
 | Testar uma porta | `Telnet 192.168.1.55 80`<br> `nc -vz 192.168.1.55 80` | `Telnet 192.168.1.55 80` |
