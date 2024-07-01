@@ -73,21 +73,16 @@ sudo systemctl status docker.service
 
 ### SCP (copy files over ssh )
 
-To copy a file from server_b to servera while logged into server_b (linux to linux):
+Copy files from server to local:
 ```
-scp /path/to/file username@server_a:/path/to/destination
-```
-
-To copy a file from server_b to A while logged into server_a (linux to linux):
-```
-scp username@server_b:/path/to/file /path/to/destination
-```
-If using powershell, and want to copy files from server to local windows, use this:
-```
-scp username@linux_server_ip:/path/from/origin/*.* c:/temp/destination/
+scp user@192.168.1.55/folder/*.* /local/folder/
 ```
 
-To copy files from Windows to Linux, just revert the order.
+Copy files from local to server:
+```
+scp /local/folder/*.* user@192.168.1.55/folder/ 
+```
+In this example, the server IP is 192.168.1.55
 
 ### CHMOD
 
