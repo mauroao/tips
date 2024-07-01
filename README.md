@@ -71,17 +71,23 @@ sudo systemctl disable docker.service
 sudo systemctl status docker.service
 ```
 
-### SCP (copy files over ssh)
+### SCP (copy files over ssh )
 
-To copy a file from B to A while logged into B:
+To copy a file from B to A while logged into B (linux to linux):
 ```
 scp /path/to/file username@a:/path/to/destination
 ```
 
-To copy a file from B to A while logged into A:
+To copy a file from B to A while logged into A (linux to linux):
 ```
 scp username@b:/path/to/file /path/to/destination
 ```
+If using powershell, and want to copy files from server to local windows, use this:
+```
+scp username@server_id:/path/from/origin/*.* c:/temp/
+
+```
+To copy files from Windows to Linux, just revert the order.
 
 ### CHMOD
 
