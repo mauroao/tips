@@ -75,12 +75,12 @@ sudo systemctl status docker.service
 
 Copy files from server to local:
 ```
-scp user@192.168.1.55/folder/*.* /local/folder/
+scp user@192.168.1.55:/folder/*.* /local/folder/
 ```
 
 Copy files from local to server:
 ```
-scp /local/folder/*.* user@192.168.1.55/folder/ 
+scp /local/folder/*.* user@192.168.1.55:/folder/ 
 ```
 In this example, the server IP is 192.168.1.55
 
