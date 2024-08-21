@@ -318,3 +318,10 @@ echo $env:JAVA_HOME
 dotnet nuget locals all --clear
 ```
 
+The root account is disabled by default in Ubuntu, so there is no root password, that's why su fails with an authentication error.
+
+Use sudo to become root:
+```
+sudo -i 
+```
+
