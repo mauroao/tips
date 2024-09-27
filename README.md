@@ -9,7 +9,8 @@
 * https://quickref.me/
 * https://yoksel.github.io/flex-cheatsheet/
 * https://git.uwaterloo.ca/-/snippets/117
-* https://gist.github.com/beyonddream/a43e067db6336b03a2c4fc5da59ba507  
+* https://gist.github.com/beyonddream/a43e067db6336b03a2c4fc5da59ba507
+* https://crontab.guru/ 
 
 ## :white_check_mark: Windows vars and tips
 
@@ -324,4 +325,3 @@ Use sudo to become root:
 ```
 sudo -i 
 ```
-
