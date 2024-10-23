@@ -2,6 +2,7 @@
 
 ## :white_check_mark: Link para outros sites com dicas rápidas:
 
+* https://cheatsheets.zip/
 * https://devhints.io/ 
 * https://learnxinyminutes.com/
 * https://github.com/gto76/python-cheatsheet
