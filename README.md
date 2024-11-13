@@ -195,6 +195,7 @@ docker volume prune
 ```bash
 dotnet publish --configuration release --runtime linux-x64
 dotnet publish --configuration release --runtime osx-x64 --self-contained true -p:PublishSingleFile=true
+dotnet publish --configuration Release --runtime win-x64 --self-contained -p:PublishSingleFile=true -p:PublishTrimmed=true
 dotnet nuget locals all --clear
 ```
 
