@@ -323,6 +323,26 @@ dotnet nuget locals all --clear
 
 The root account is disabled by default in Ubuntu, so there is no root password, that's why su fails with an authentication error.
 
+WIP
+
+| Command                | Visual Studio           | Visual Studio Code       | LunarVim               | Rider                   |
+|------------------------|------------------------|--------------------------|-------------------------|-------------------------|
+| Info (Hover)          | `Ctrl + K, Ctrl + I`   | `Ctrl + K, Ctrl + I`     | `K`                     | `Ctrl + Q`              |
+| Go to Definition      | `F12`                   | `F12`                     | `gd`                    | `Ctrl + B` / `Ctrl + Click` |
+| Go to Implementation  | `Ctrl + F12`           | `Ctrl + F12`             | `gD`                     | `Ctrl + Shift + B`      |
+| Go to References      | `Shift + F12`          | `Shift + F12`            | `gr`                     | `Alt + F7`              |
+| Rename Symbol         | `Ctrl + R, Ctrl + R`   | `F2`                      | `:lua vim.lsp.buf.rename()` | `Shift + F6`           |
+| Refactoring           | `Ctrl + R, Ctrl + R`   | `Ctrl + Shift + R`       | `:lua vim.lsp.buf.code_action()` | `Ctrl + Alt + Shift + T` |
+| Format Document       | `Ctrl + K, Ctrl + D`   | `Shift + Alt + F`        | `:lua vim.lsp.buf.format()` | `Ctrl + Alt + L`       |
+| Quick Fix            | `Ctrl + .`             | `Ctrl + .`               | `:lua vim.lsp.buf.code_action()` | `Alt + Enter`          |
+| Peek Definition       | `Alt + F12`            | `Alt + F12`              | `:lua vim.lsp.buf.definition()` | `Ctrl + Shift + I`     |
+| Navigate Back        | `Ctrl + -`             | `Alt + Left Arrow`       | `Ctrl + o`               | `Ctrl + Alt + Left`     |
+| Navigate Forward     | `Ctrl + Shift + -`     | `Alt + Right Arrow`      | `Ctrl + i`               | `Ctrl + Alt + Right`    |
+| Show Errors          | `Ctrl + Shift + M`     | `Ctrl + Shift + M`       | `:lua vim.diagnostic.open_float()` | `Alt + 6`              |
+| Open Terminal        | `Ctrl + ~`             | `` Ctrl + ` ``          | `:term`                  | `Alt + F12`             |
+
+
+
 Use sudo to become root:
 ```
 sudo -i 
