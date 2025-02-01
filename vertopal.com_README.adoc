@@ -1,0 +1,449 @@
+== Guia rápido
+
+=== :white_check_mark: Link para outros sites com dicas rápidas:
+
+* https://cheatsheets.zip/
+* https://devhints.io/
+* https://learnxinyminutes.com/
+* https://github.com/gto76/python-cheatsheet
+* https://guialinux.uniriotec.br
+* https://quickref.me/
+* https://yoksel.github.io/flex-cheatsheet/
+* https://git.uwaterloo.ca/-/snippets/117
+* https://gist.github.com/beyonddream/a43e067db6336b03a2c4fc5da59ba507
+* https://crontab.guru/
+
+=== :white_check_mark: Windows vars and tips
+
+[width="100%",cols="23%,77%",options="header",]
+|===
+|Variable |Description
+|`%APPDATA%` |Path to the current user’s Application Data folder
+
+|`%TEMP%` |Path to the temporary folder for the current user
+
+|`%USERPROFILE%` |Path to the current user’s profile folder
+
+|`%PROGRAMFILES%` |Path to the Program Files folder
+
+|`%SYSTEMROOT%` |Path to the Windows installation directory
+
+|`%USERNAME%` |Current user’s username
+
+|`%WINDIR%` |Path to the Windows directory
+
+|`%HOMEPATH%` |Path to the current user’s home folder
+
+|`%LOCALAPPDATA%` |Path to the current user’s local AppData folder
+
+|`shell:startup` |AppData/Microsoft/Windows/Start Menu/Programs/Startup
+folder
+|===
+
+[width="100%",cols="40%,60%",options="header",]
+|===
+|Shortcut |Program
+|`control` |Control Panel
+|`sysdm.cpl` |System Properties
+|`ncpa.cpl` |Network Connections
+|`appwiz.cpl` |Programs and Features
+|`desk.cpl` |Display Properties
+|`firewall.cpl` |Windows Firewall
+|`inetcpl.cpl` |Internet Options
+|`timedate.cpl` |Date and Time
+|`mmsys.cpl` |Sound
+|`powercfg.cpl` |Power Options
+|`devmgmt.msc` |Device Manager
+|`compmgmt.msc` |Computer Management
+|`services.msc` |Services
+|`taskmgr` |Task Manager
+|===
+
+=== :white_check_mark: Linux
+
+==== Listar top 10 comandos com maior uso de cpu
+
+....
+ps -A --format=pcpu,args --sort=-pcpu | head -n 11 | cut -c 1-100
+....
+
+==== Serviços (exemplos de comandos)
+
+....
+sudo service --status-all
+sudo service smbd status
+sudo service smbd start
+sudo service smbd stop
+
+sudo systemctl list-units | grep smbd.service
+sudo systemctl list-units | grep docker.service
+sudo systemctl start docker.service
+sudo systemctl stop docker.service
+sudo systemctl enable docker.service
+sudo systemctl disable docker.service
+sudo systemctl status docker.service
+....
+
+==== SCP (copy files over ssh )
+
+Copy files from server to local:
+
+....
+scp user@192.168.1.55:/folder/*.* /local/folder/
+....
+
+Copy files from local to server:
+
+....
+scp /local/folder/*.* user@192.168.1.55:/folder/ 
+....
+
+In this example, the server IP is 192.168.1.55
+
+==== CHMOD
+
+Add read/write permissions recursivelly for all groups in all
+files/folders:
+
+....
+sudo chmod -R a+rw /path/to/folder
+....
+
+=== :white_check_mark: Sintaxes de comandos nas linguagens que utilizo
+
+[width="100%",cols="29%,19%,26%,26%",options="header",]
+|===
+|Comando |C# |Node |Python
+|String interpolation |`$"my name is {name}"` |`\'my name is ${name}\'`
+|`f'my name is {name}'` (new) `"my name is {}".format(name)`
+|===
+
+=== :white_check_mark: Comandos de Terminal em Windows e Linux
+
+[width="100%",cols="16%,27%,28%,29%",options="header",]
+|===
+|ENV vars |Mac |Linux |PowerShell
+|Show all |`echo $ENV` |`printenv` |`dir env:`
+
+|Show one |`echo $ENV_VAR` |`echo $ENV_VAR` |`dir env:JAVA_HOME`
+
+|Add new |`export NEW_VAR=value` |`export NEW_VAR=value`
+|`$env:NEW_VAR = "value"`
+|===
+
+[width="100%",cols="38%,26%,36%",options="header",]
+|===
+|Comando |Linux / Mac |cmd or Powershell
+|AND operator (vários comandos) |`&&` |`&&`
+
+|Line Break (útil para linhas muito grandes) |`\` |`^` para cmd e
+`backtick' para powershell
+
+|Exibir caminho de app no path |`which` |`where`
+
+|Localizar arquivo |`find ./ -iname "*teste*"` |`dir -Recurse teste.txt`
+
+|Variáveis de ambiente |`env` `export VAR1=teste` `echo $VAR1` |`set`
+`set VAR1=teste` `echo %VAR1%` `Get-ChildItem Env:VAR1`
+`Set-Item -Path Env:VAR1 -Value "teste"`
+
+|Persistir variáveis de ambiente |`/etc/enviromment` `~/.bachrc`
+`/etc/profile` |Windows + R, type:
+`rundll32 sysdm.cpl,EditEnvironmentVariables` or, type: `SETX FOO BAR`
+
+|Testar uma porta |`Telnet 192.168.1.55 80` `nc -vz 192.168.1.55 80`
+|`Telnet 192.168.1.55 80`
+
+|Command substitution |`$(pwd)` or `\'pwd\'` |não tem
+
+|Flush DNS |`sudo killall -HUP mDNSResponder; say dns cleared` (mac)
+`sudo /etc/init.d/networking restart` linux |`ipconfig /flushdns`
+
+|Watch file |`tail -f /var/log/syslog`
+|`Get-Content -Path "C:\scripts\test.txt" -Wait`
+
+|remove all |`rm -rf folder` |`Remove-Item -Force -Recurse folder`
+
+|create file |`touch file.txt` |`New-Item file.txt`
+|===
+
+=== :white_check_mark: Git (exemplos)
+
+==== Stash
+
+[cols=",",options="header",]
+|===
+|Objetivo |Comando
+|Stash one file |`git stash push -m "message" -- test.txt`
+|Stash untracked files |`git stash push -m "message" -u`
+|Apply staged too |`git stash apply --index`
+|Apply specific stashed |`git stash apply stash@{0}`
+|===
+
+=== :white_check_mark: Docker (exemplos)
+
+==== Imagens
+
+[width="100%",cols="54%,46%",options="header",]
+|===
+|Objetivo |Comando
+|Baixar uma imagem
+|`docker pull mcr.microsoft.com/dotnet/core/runtime:3.1`
+
+|Listar imagens: |`docker image list --all`
+
+|Remover uma imagem
+|`docker image rm mcr.microsoft.com/dotnet/core/runtime:3.1`
+
+|Remover imagens sem container associado |`docker image prune --all`
+
+|Criar/Executar container (1)
+|`docker run --name dotnet31 -it --rm --privileged mcr.microsoft.com/dotnet/core/runtime:3.1 /bin/bash`
+
+|Criar/Executar container (2)
+|`docker run --name ubuntu -it --rm --privileged -p 445:445 ubuntu:20.04 /bin/bash`
+
+|Criar/Executar container (3)
+|`docker run -it --rm --entrypoint /bin/bash app1` (override entrypoint)
+|===
+
+==== Containers
+
+[width="100%",cols="54%,46%",options="header",]
+|===
+|Objetivo |Comando
+|Criar container
+|`docker container create -it --name 31 --privileged -v c:\temp:/home mcr.microsoft.com//core/runtime:3.1 /bin/bash`
+
+|Listar containers |`docker container list --all`
+
+|Iniciar container |`docker container start 31`
+
+|Copiar arquivos para container |`docker cp bin/. 31:home/bin`
+
+|Conectar em um container |`docker container exec -it 31 /bin/bash`
+
+|Acompanhar logs |`docker logs --follow 31`
+
+|Parar container |`docker container stop 31`
+
+|Remover container |`docker container rm 31`
+
+|Remover containers parados |`docker container prune`
+
+|Limpar tudo (!!!!) |`docker system prune --all`
+|===
+
+==== Docker compose
+
+[cols=",",options="header",]
+|===
+|Objetivo |Comando
+|Docker compose ``iterativo'' |`sudo docker-compose run --rm service1`
+|===
+
+Exemplo de docker-compose.yml ``iterativo'':
+
+[source,yml]
+----
+version: "3"
+services:
+  service1:
+    image: mcr.microsoft.com//core/runtime:3.1
+    stdin_open: true
+    tty: true
+    command: "/bin/bash"
+----
+
+==== Docker (more)
+
+....
+docker system prune --all
+docker volume prune 
+....
+
+=== :white_check_mark: dotnet core
+
+[source,bash]
+----
+dotnet publish --configuration release --runtime linux-x64
+dotnet publish --configuration release --runtime osx-x64 --self-contained true -p:PublishSingleFile=true
+dotnet publish --configuration Release --runtime win-x64 --self-contained -p:PublishSingleFile=true -p:PublishTrimmed=true
+dotnet nuget locals all --clear
+----
+
+=== :white_check_mark: Configuração do VS Code
+
+Instalar os plugins:
+
+* EditorConfig for VS Code
+* ESLint
+* vscode-icons
+
+Configurar o settings.json (CTRL + SHIFT + P) - Preferences - Open
+Settings:
+
+[source,json]
+----
+{
+    "editor.fontFamily": "'Source code pro', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "window.zoomLevel": 0,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.presets.foldersAllDefaultIcon": true,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "workbench.colorCustomizations": {
+        "tab.activeBorderTop": "#ff0000"
+    }  
+}
+----
+
+=== :white_check_mark: Abrir VS Code no MACOS pelo prompt:
+
+* Open the Command Palette (Ctrl+Shift+P) and type `shell command' to
+find the Shell Command:
+* Install `code' command in PATH command.
+
+=== :white_check_mark: Temp (catalogar depois…)
+
+Subnet CIDR examples:
+
+....
++--------+-----------------+
+| CIDR   | Subnet Mask     |
++--------+-----------------+
+| /32    | 255.255.255.255 |
+| /24    | 255.255.255.0   |
+| /16    | 255.255.0.0     |
+| /8     | 255.0.0.0       |
++--------+-----------------+
+....
+
+*Atalhos do Windows*:
+
+* Network connections => Win+R ncpa.cpl
+* https://www.itechtics.com/control-panel-applets-cpl/[more..].
+* more…
+* etc…
+
+Tirar o ``verdão'' do background da exibição dos diretórios no comando
+`ls`. Colocar isso no `.bashrc` da pasta `home` do usuário.
+
+....
+LS_COLORS='ow=01;36;40'
+export LS_COLORS
+....
+
+CTRL + D no Visual Studio igual ao Visual Studio Code: Tools => Options
+=> Keyboard => Show Command containing string:
+
+....
+Edit.InsertNextMatchingCaret
+Edit.Duplicate
+....
+
+ssh no git:
+
+....
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+....
+
+Fonte Source Code PRO https://fonts.google.com/specimen/Source+Code+Pro
+
+Instalar Java runtime 8 no MAC (pra usar com o VSTABI):
+https://www.java.com/en/download/mac_download.jsp
+
+Instalar o Java Development Kit 8 no MAC (pra desenvolver com o
+Eclipse):
+https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
+
+Link direto para o MAC OSX Mojave:
+https://itunes.apple.com/us/app/macos-mojave/id1398502828?ls=1&mt=12
+
+Muito bom: https://loading.io/css/
+
+trocar cor da janela do windows não ativado (chipa Microsoft!!!): +
+https://superuser.com/questions/1245923/registry-keys-to-change-personalization-settings
+
+remove windows 10 watermark https://www.youtube.com/watch?v=X-E7syOcPEE
+
+https://coderwall.com/p/7smjkq/multiple-ssh-keys-for-different-accounts-on-github-or-gitlab
+
+find ./* | xargs xattr -r -d com.apple.quarantine
+
+*Dica do Akita*
+
+As Administrator!!!!
+
+[source,powershell]
+----
+wmic diskdrive list brief
+----
+
+[source,powershell]
+----
+wsl --mount \\.\PHYSICALDRIVE1
+----
+
+....
+echo $env:JAVA_HOME
+....
+
+....
+dotnet nuget locals all --clear
+....
+
+The root account is disabled by default in Ubuntu, so there is no root
+password, that’s why su fails with an authentication error.
+
+WIP
+
+[width="100%",cols="21%,19%,20%,20%,20%",options="header",]
+|===
+|Command |Visual Studio |Visual Studio Code |LunarVim |Rider
+|Info (Hover) |`Ctrl + K, Ctrl + I` |`Ctrl + K, Ctrl + I` |`K`
+|`Ctrl + Q`
+
+|Go to Definition |`F12` |`F12` |`gd` |`Ctrl + B` / `Ctrl + Click`
+
+|Go to Implementation |`Ctrl + F12` |`Ctrl + F12` |`gD`
+|`Ctrl + Shift + B`
+
+|Go to References |`Shift + F12` |`Shift + F12` |`gr` |`Alt + F7`
+
+|Rename Symbol |`Ctrl + R, Ctrl + R` |`F2` |`:lua vim.lsp.buf.rename()`
+|`Shift + F6`
+
+|Refactoring |`Ctrl + R, Ctrl + R` |`Ctrl + Shift + R`
+|`:lua vim.lsp.buf.code_action()` |`Ctrl + Alt + Shift + T`
+
+|Format Document |`Ctrl + K, Ctrl + D` |`Shift + Alt + F`
+|`:lua vim.lsp.buf.format()` |`Ctrl + Alt + L`
+
+|Quick Fix |`Ctrl + .` |`Ctrl + .` |`:lua vim.lsp.buf.code_action()`
+|`Alt + Enter`
+
+|Peek Definition |`Alt + F12` |`Alt + F12`
+|`:lua vim.lsp.buf.definition()` |`Ctrl + Shift + I`
+
+|Navigate Back |`Ctrl + -` |`Alt + Left Arrow` |`Ctrl + o`
+|`Ctrl + Alt + Left`
+
+|Navigate Forward |`Ctrl + Shift + -` |`Alt + Right Arrow` |`Ctrl + i`
+|`Ctrl + Alt + Right`
+
+|Show Errors |`Ctrl + Shift + M` |`Ctrl + Shift + M`
+|`:lua vim.diagnostic.open_float()` |`Alt + 6`
+
+|Open Terminal |`Ctrl + ~` |`Ctrl + \'` |`:term` |`Alt + F12`
+|===
+
+Use sudo to become root:
+
+....
+sudo -i 
+....
