@@ -15,35 +15,35 @@
 
 ## :white_check_mark: Windows vars and tips
 
-| Variable        | Description                                             |
-|-----------------|---------------------------------------------------------|
-| `%APPDATA%`     | Path to the current user's Application Data folder      |
-| `%TEMP%`        | Path to the temporary folder for the current user       |
-| `%USERPROFILE%` | Path to the current user's profile folder               |
-| `%PROGRAMFILES%`| Path to the Program Files folder                        |
-| `%SYSTEMROOT%`  | Path to the Windows installation directory              |
-| `%USERNAME%`    | Current user's username                                 |
-| `%WINDIR%`      | Path to the Windows directory                           |
-| `%HOMEPATH%`    | Path to the current user's home folder                  |
-| `%LOCALAPPDATA%`| Path to the current user's local AppData folder         |
-| `shell:startup` | AppData\Roaming/Microsoft/Windows/Start Menu/Programs/Startup folder |
+| Variable          | Description                                          |
+|------------------|------------------------------------------------------|
+| `%APPDATA%`      | Path to the current user's Application Data folder   |
+| `%TEMP%`         | Path to the temporary folder for the current user    |
+| `%USERPROFILE%`  | Path to the current user's profile folder           |
+| `%PROGRAMFILES%` | Path to the Program Files folder                     |
+| `%SYSTEMROOT%`   | Path to the Windows installation directory           |
+| `%USERNAME%`     | Current user's username                              |
+| `%WINDIR%`       | Path to the Windows directory                        |
+| `%HOMEPATH%`     | Path to the current user's home folder              |
+| `%LOCALAPPDATA%` | Path to the current user's local AppData folder     |
+| `shell:startup`  | AppData\Roaming/Microsoft/Windows/Start Menu/Programs/Startup folder |
 
-| Shortcut                     | Program                                     |
-|------------------------------|---------------------------------------------|
-| `control`                    | Control Panel                               |
-| `sysdm.cpl`                  | System Properties                           |
-| `ncpa.cpl`                   | Network Connections                         |
-| `appwiz.cpl`                 | Programs and Features                       |
-| `desk.cpl`                   | Display Properties                          |
-| `firewall.cpl`               | Windows Firewall                            |
-| `inetcpl.cpl`                | Internet Options                            |
-| `timedate.cpl`               | Date and Time                               |
-| `mmsys.cpl`                  | Sound                                       |
-| `powercfg.cpl`               | Power Options                               |
-| `devmgmt.msc`                | Device Manager                              |
-| `compmgmt.msc`               | Computer Management                         |
-| `services.msc`               | Services                                    |
-| `taskmgr`                    | Task Manager                                |
+| Shortcut          | Program                                             |
+|-------------------|-----------------------------------------------------|
+| `control`         | Control Panel                                       |
+| `sysdm.cpl`       | System Properties                                   |
+| `ncpa.cpl`        | Network Connections                                 |
+| `appwiz.cpl`      | Programs and Features                              |
+| `desk.cpl`        | Display Properties                                  |
+| `firewall.cpl`    | Windows Firewall                                    |
+| `inetcpl.cpl`     | Internet Options                                    |
+| `timedate.cpl`    | Date and Time                                       |
+| `mmsys.cpl`       | Sound                                               |
+| `powercfg.cpl`    | Power Options                                       |
+| `devmgmt.msc`     | Device Manager                                      |
+| `compmgmt.msc`    | Computer Management                                 |
+| `services.msc`    | Services                                            |
+| `taskmgr`         | Task Manager                                        |
 
 
 
@@ -96,82 +96,74 @@ sudo chmod -R a+rw /path/to/folder
 
 ## :white_check_mark: Sintaxes de comandos nas linguagens que utilizo
 
-| Comando | C# | Node | Python
-| ------- | ----- | ------- | ------- |
-| String interpolation | `$"my name is {name}"` | `` `my name is ${name}` ``  | `f'my name is {name}'` (new)<br> `"my name is {}".format(name)` |
+| Comando           | C#                      | Node                    | Python                  |
+|------------------|-------------------------|-------------------------|-------------------------|
+| String interpolation | `$"my name is {name}"` | `` `my name is ${name}` `` | `f'my name is {name}'` (new)<br> `"my name is {}".format(name)` |
 
 ## :white_check_mark: Comandos de Terminal em Windows e Linux
 
 
-| ENV vars   | Mac                    | Linux                   | PowerShell               |
-|------------|------------------------|-------------------------|--------------------------|
-| Show all   | `echo $ENV`            | `printenv`              | `dir env:`               |
-| Show one   | `echo $ENV_VAR`        | `echo $ENV_VAR`         | `dir env:JAVA_HOME`      |
-| Add new    | `export NEW_VAR=value` | `export NEW_VAR=value`  | `$env:NEW_VAR = "value"` |
+| ENV vars         | Mac                     | Linux                   | PowerShell             |
+|------------------|------------------------|-------------------------|------------------------|
+| Show all         | `echo $ENV`            | `printenv`              | `dir env:`             |
+| Show one         | `echo $ENV_VAR`        | `echo $ENV_VAR`         | `dir env:JAVA_HOME`    |
+| Add new          | `export NEW_VAR=value` | `export NEW_VAR=value`  | `$env:NEW_VAR = "value"` |
  
  
-| Comando | Linux / Mac | cmd or Powershell |
-| ------- | ----- | ------- |
-| AND operator (vários comandos) | `&&` | `&&` |
-| Line Break (útil para linhas muito grandes) | `\` | `^` para cmd e 'backtick' para powershell |
-| Exibir caminho de app no path | `which` | `where` |
-| Localizar arquivo | `find ./ -iname "*teste*"` | `dir -Recurse teste.txt` |
-| Variáveis de ambiente | `env` <br> `export VAR1=teste` <br> `echo $VAR1` | `set` <br> `set VAR1=teste` <br> `echo %VAR1%` <br> `Get-ChildItem Env:VAR1` <br> `Set-Item -Path Env:VAR1 -Value "teste"`
-| Persistir variáveis de ambiente | `/etc/enviromment` <br> `~/.bachrc` <br> `/etc/profile` | Windows + R,<br> type: `rundll32 sysdm.cpl,EditEnvironmentVariables` <br> or, type: `SETX FOO BAR` |
-| Testar uma porta | `Telnet 192.168.1.55 80`<br> `nc -vz 192.168.1.55 80` | `Telnet 192.168.1.55 80` |
-| Command substitution | `$(pwd)` or `` `pwd` `` | não tem |
-| Flush DNS | `sudo killall -HUP mDNSResponder; say dns cleared` (mac) <br>`sudo /etc/init.d/networking restart` linux | `ipconfig /flushdns` |
-| Watch file | `tail -f /var/log/syslog` | `Get-Content -Path "C:\scripts\test.txt" -Wait` |
-| remove all | `rm -rf folder` | `Remove-Item -Force -Recurse folder` | 
-| create file | `touch file.txt` | `New-Item file.txt` |
+| Comando          | Linux / Mac            | cmd or Powershell       |
+|------------------|------------------------|-------------------------|
+| AND operator     | `&&`                   | `&&`                    |
+| Line Break       | `\`                    | `^` (cmd), \` (ps)      |
+| Exibir caminho   | `which`                | `where`                 |
+| Localizar arquivo| `find ./ -iname "*teste*"` | `dir -Recurse teste.txt` |
+| Testar uma porta | `Telnet 192.168.1.55 80`<br>`nc -vz 192.168.1.55 80` | `Telnet 192.168.1.55 80` |
+| Command substitution | `$(pwd)` or `` `pwd` `` | não tem                |
+| Flush DNS        | `sudo killall -HUP mDNSResponder`<br>`sudo /etc/init.d/networking restart` | `ipconfig /flushdns` |
+| Watch file       | `tail -f /var/log/syslog` | `Get-Content -Path "file.txt" -Wait` |
+| remove all       | `rm -rf folder`        | `Remove-Item -Force -Recurse folder` |
+| create file      | `touch file.txt`       | `New-Item file.txt`     |
 
 ## :white_check_mark: Git (exemplos)
 
 ### Stash
 
-
-| Objetivo | Comando |
-| -------- | ------- |
-| Stash one file | `git stash push -m "message" -- test.txt` | 
-| Stash untracked files | `git stash push -m "message" -u ` | 
-| Apply staged too | `git stash apply --index` |
-| Apply specific stashed | `git stash apply stash@{0}` |
-
+| Objetivo         | Comando                                              |
+|------------------|-----------------------------------------------------|
+| Stash one file   | `git stash push -m "message" -- test.txt`           |
+| Stash untracked  | `git stash push -m "message" -u`                    |
+| Apply staged too | `git stash apply --index`                           |
+| Apply specific   | `git stash apply stash@{0}`                         |
 
 ## :white_check_mark: Docker (exemplos)
 
 ### Imagens
 
-| Objetivo | Comando |
-| -------- | ------- |
-| Baixar uma imagem | `docker pull mcr.microsoft.com/dotnet/core/runtime:3.1` |
-| Listar imagens: | `docker image list --all` |
-| Remover uma imagem | `docker image rm mcr.microsoft.com/dotnet/core/runtime:3.1` |
-| Remover imagens sem container associado | `docker image prune --all` |
-| Criar/Executar container (1)  | `docker run --name dotnet31 -it --rm --privileged mcr.microsoft.com/dotnet/core/runtime:3.1 /bin/bash` |
-| Criar/Executar container (2) | `docker run --name ubuntu -it --rm --privileged -p 445:445 ubuntu:20.04 /bin/bash` |
-| Criar/Executar container (3) | `docker run -it --rm --entrypoint /bin/bash app1` (override entrypoint) |
-
+| Objetivo         | Comando                                              |
+|------------------|-----------------------------------------------------|
+| Baixar imagem    | `docker pull mcr.microsoft.com/dotnet/core/runtime:3.1` |
+| Listar imagens   | `docker image list --all`                           |
+| Remover imagem   | `docker image rm mcr.microsoft.com/dotnet/core/runtime:3.1` |
+| Remover unused   | `docker image prune --all`                          |
 
 ### Containers
 
-| Objetivo | Comando |
-| -------- | ------- |
-| Criar container | `docker container create -it --name 31 --privileged -v c:\temp:/home mcr.microsoft.com//core/runtime:3.1 /bin/bash` |
-| Listar containers | `docker container list --all` |
-| Iniciar container | `docker container start 31` |
-| Copiar arquivos para container | `docker cp bin/. 31:home/bin` |
-| Conectar em um container | `docker container exec -it 31 /bin/bash` |
-| Acompanhar logs | `docker logs --follow 31` |
-| Parar container | `docker container stop 31` |
-| Remover container | `docker container rm 31` |
-| Remover containers parados | `docker container prune` |
-| Limpar tudo (!!!!) | `docker system prune --all` |
+| Objetivo         | Comando                                              |
+|------------------|-----------------------------------------------------|
+| Criar container  | `docker container create -it --name 31 mcr.microsoft.com/core/runtime:3.1` |
+| Listar containers| `docker container list --all`                        |
+| Iniciar container| `docker container start 31`                          |
+| Copiar arquivos  | `docker cp bin/. 31:home/bin`                       |
+| Conectar container| `docker container exec -it 31 /bin/bash`            |
+| Acompanhar logs  | `docker logs --follow 31`                           |
+| Parar container  | `docker container stop 31`                          |
+| Remover container| `docker container rm 31`                            |
+| Remove stopped   | `docker container prune`                            |
+| Limpar tudo     | `docker system prune --all`                         |
 
 ### Docker compose
 
-| Objetivo | Comando |
-| -------- | ------- |
+| Objetivo         | Comando                                              |
+|------------------|-----------------------------------------------------|
 | Docker compose "iterativo" | `sudo docker-compose run --rm service1` |
 
 Exemplo de docker-compose.yml "iterativo":
@@ -323,23 +315,23 @@ dotnet nuget locals all --clear
 
 The root account is disabled by default in Ubuntu, so there is no root password, that's why su fails with an authentication error.
 
-WIP
+# LSP shortcuts
 
-| Command                | Visual Studio           | Visual Studio Code       | LunarVim               | Rider                   |
-|------------------------|------------------------|--------------------------|-------------------------|-------------------------|
-| Info (Hover)          | `Ctrl + K, Ctrl + I`   | `Ctrl + K, Ctrl + I`     | `K`                     | `Ctrl + Q`              |
-| Go to Definition      | `F12`                   | `F12`                     | `gd`                    | `Ctrl + B` / `Ctrl + Click` |
-| Go to Implementation  | `Ctrl + F12`           | `Ctrl + F12`             | `gD`                     | `Ctrl + Shift + B`      |
-| Go to References      | `Shift + F12`          | `Shift + F12`            | `gr`                     | `Alt + F7`              |
-| Rename Symbol         | `Ctrl + R, Ctrl + R`   | `F2`                      | `:lua vim.lsp.buf.rename()` | `Shift + F6`           |
-| Refactoring           | `Ctrl + R, Ctrl + R`   | `Ctrl + Shift + R`       | `:lua vim.lsp.buf.code_action()` | `Ctrl + Alt + Shift + T` |
-| Format Document       | `Ctrl + K, Ctrl + D`   | `Shift + Alt + F`        | `:lua vim.lsp.buf.format()` | `Ctrl + Alt + L`       |
-| Quick Fix            | `Ctrl + .`             | `Ctrl + .`               | `:lua vim.lsp.buf.code_action()` | `Alt + Enter`          |
-| Peek Definition       | `Alt + F12`            | `Alt + F12`              | `:lua vim.lsp.buf.definition()` | `Ctrl + Shift + I`     |
-| Navigate Back        | `Ctrl + -`             | `Alt + Left Arrow`       | `Ctrl + o`               | `Ctrl + Alt + Left`     |
-| Navigate Forward     | `Ctrl + Shift + -`     | `Alt + Right Arrow`      | `Ctrl + i`               | `Ctrl + Alt + Right`    |
-| Show Errors          | `Ctrl + Shift + M`     | `Ctrl + Shift + M`       | `:lua vim.diagnostic.open_float()` | `Alt + 6`              |
-| Open Terminal        | `Ctrl + ~`             | `` Ctrl + ` ``          | `:term`                  | `Alt + F12`             |
+| Command              | Visual Studio          | Visual Studio Code     | LazyVim              | Rider                  |
+|----------------------|------------------------|------------------------|----------------------|------------------------|
+| Info (Hover)         | `Ctrl + K, Ctrl + I`   | `Ctrl + K, Ctrl + I`   | `K`                  | `Ctrl + Q`             |
+| Go to Definition     | `F12`                  | `F12`                  | `gd`                 | `Ctrl + B`             |
+| Go to Implementation | `Ctrl + F12`           | `Ctrl + F12`           | `gi`                 | `Ctrl + Shift + B`     |
+| Go to References     | `Shift + F12`          | `Shift + F12`          | `gr`                 | `Alt + F7`             |
+| Rename Symbol        | `Ctrl + R, Ctrl + R`   | `F2`                   | `<leader>cr`         | `Shift + F6`           |
+| Refactoring          | `Ctrl + R, Ctrl + R`   | `Ctrl + Shift + R`     | `<leader>ca`         | `Ctrl + Alt + Shift + T`|
+| Format Document      | `Ctrl + K, Ctrl + D`   | `Shift + Alt + F`      | `<leader>cf`         | `Ctrl + Alt + L`       |
+| Quick Fix            | `Ctrl + .`             | `Ctrl + .`             | `<leader>ca`         | `Alt + Enter`          |
+| Peek Definition      | `Alt + F12`            | `Alt + F12`            | `gd`                 | `Ctrl + Shift + I`     |
+| Navigate Back        | `Ctrl + -`             | `Alt + Left Arrow`     | `<C-o>`              | `Ctrl + Alt + Left`    |
+| Navigate Forward     | `Ctrl + Shift + -`     | `Alt + Right Arrow`    | `<C-i>`              | `Ctrl + Alt + Right`   |
+| Show Errors          | `Ctrl + Shift + M`     | `Ctrl + Shift + M`     | `<leader>cd`         | `Alt + 6`              |
+| Open Terminal        | `Ctrl + ~`             | `` Ctrl + ` ``         | `:term`              | `Alt + F12`            |
 
 
 
