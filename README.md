@@ -317,20 +317,20 @@ The root account is disabled by default in Ubuntu, so there is no root password,
 
 # LSP shortcuts
 
-| Command              | Visual Studio          | Visual Studio Code     | LazyVim              | Rider                   |
-|----------------------|------------------------|------------------------|----------------------|-------------------------|
-| Info (Hover)         | `K`                    | `K`                    | `K`                  | `????????`              |
-| Go to Definition     | `gd`                   | `gd`                   | `gd`                 | `gd`                    |
-| Go to Implementation | `gI`                   | `gI`                   | `gI`                 | `gI`                    |
-| Go to References     | `gr`                   | `gr`                   | `gr`                 | `gr`                    |
-| Navigate Back        | `<C-o>`                | `<C-o>`                | `<C-o>`              | `<C-o>`                 |
-| Navigate Forward     | `<C-i>`                | `<C-i>`                | `<C-i>`              | `<C-i>`                 |
-| Open Terminal        | `` Ctrl + ` ``         | `` Ctrl + ` ``         | `<C-/>`              | `?????????`             |
-| Signature help       | `gK`                   | `gK`                   | `gK`                 | `gK`                    |
-| Rename Symbol        | `Ctrl + R, Ctrl + R`   | `F2`                   | `<leader>cr`         | `Shift + F6`            |
-| Refactoring          | `Ctrl + R, Ctrl + R`   | `Ctrl + Shift + R`     | `<leader>ca`         | `Ctrl + Alt + Shift + T`|
-| Format Document      | `Ctrl + K, Ctrl + D`   | `Shift + Alt + F`      | `<leader>cf`         | `Ctrl + Alt + L`        |
-| Quick Fix            | `Ctrl + .`             | `Ctrl + .`             | `<leader>ca`         | `Alt + Enter`           |
+| Command              | Visual Studio          | VS Code              | LazyVim         | Rider                   |
+|----------------------|------------------------|----------------------|-----------------|-------------------------|
+| Info (Hover)         | `K`                    | `K`                  | `K`             | `????????`              |
+| Go to Definition     | `gd`                   | `gd`                 | `gd`            | `gd`                    |
+| Go to Implementation | `gI`                   | `gI`                 | `gI`            | `gI`                    |
+| Go to References     | `gr`                   | `gr`                 | `gr`            | `gr`                    |
+| Navigate Back        | `<C-o>`                | `<C-o>`              | `<C-o>`         | `<C-o>`                 |
+| Navigate Forward     | `<C-i>`                | `<C-i>`              | `<C-i>`         | `<C-i>`                 |
+| Open Terminal        | `` Ctrl + ` ``         | `` Ctrl + ` ``       | `<C-/>`         | `?????????`             |
+| Signature help       | `gK`                   | `gK`                 | `gK`            | `gK`                    |
+| Rename Symbol        | `Ctrl + R, Ctrl + R`   | `F2`                 | `<leader>cr`    | `Shift + F6`            |
+| Refactoring          | `Ctrl + R, Ctrl + R`   | `Ctrl + Shift + R`   | `<leader>ca`    | `Ctrl + Alt + Shift + T`|
+| Format Document      | `Ctrl + K, Ctrl + D`   | `Shift + Alt + F`    | `<leader>cf`    | `Ctrl + Alt + L`        |
+| Quick Fix            | `Ctrl + .`             | `Ctrl + .`           | `<leader>ca`    | `Alt + Enter`           |
 
 
 
