@@ -317,21 +317,20 @@ The root account is disabled by default in Ubuntu, so there is no root password,
 
 # LSP shortcuts
 
-| Command              | Visual Studio          | Visual Studio Code     | LazyVim              | Rider                  |
-|----------------------|------------------------|------------------------|----------------------|------------------------|
-| Info (Hover)         | `Ctrl + K, Ctrl + I`   | `Ctrl + K, Ctrl + I`   | `K`                  | `Ctrl + Q`             |
-| Go to Definition     | `F12`                  | `F12`                  | `gd`                 | `Ctrl + B`             |
-| Go to Implementation | `Ctrl + F12`           | `Ctrl + F12`           | `gi`                 | `Ctrl + Shift + B`     |
-| Go to References     | `Shift + F12`          | `Shift + F12`          | `gr`                 | `Alt + F7`             |
-| Rename Symbol        | `Ctrl + R, Ctrl + R`   | `F2`                   | `<leader>cr`         | `Shift + F6`           |
+| Command              | Visual Studio          | Visual Studio Code     | LazyVim              | Rider                   |
+|----------------------|------------------------|------------------------|----------------------|-------------------------|
+| Info (Hover)         | `K`                    | `K`                    | `K`                  | `????????`              |
+| Go to Definition     | `gd`                   | `gd`                   | `gd`                 | `gd`                    |
+| Go to Implementation | `gI`                   | `gI`                   | `gI`                 | `gI`                    |
+| Go to References     | `gr`                   | `gr`                   | `gr`                 | `gr`                    |
+| Navigate Back        | `<C-o>`                | `<C-o>`                | `<C-o>`              | `<C-o>`                 |
+| Navigate Forward     | `<C-i>`                | `<C-i>`                | `<C-i>`              | `<C-i>`                 |
+| Open Terminal        | `` Ctrl + ` ``         | `` Ctrl + ` ``         | `<C-/>`              | `?????????`             |
+| Signature help       | `gK`                   | `gK`                   | `gK`                 | `gK`                    |
+| Rename Symbol        | `Ctrl + R, Ctrl + R`   | `F2`                   | `<leader>cr`         | `Shift + F6`            |
 | Refactoring          | `Ctrl + R, Ctrl + R`   | `Ctrl + Shift + R`     | `<leader>ca`         | `Ctrl + Alt + Shift + T`|
-| Format Document      | `Ctrl + K, Ctrl + D`   | `Shift + Alt + F`      | `<leader>cf`         | `Ctrl + Alt + L`       |
-| Quick Fix            | `Ctrl + .`             | `Ctrl + .`             | `<leader>ca`         | `Alt + Enter`          |
-| Peek Definition      | `Alt + F12`            | `Alt + F12`            | `gd`                 | `Ctrl + Shift + I`     |
-| Navigate Back        | `Ctrl + -`             | `Alt + Left Arrow`     | `<C-o>`              | `Ctrl + Alt + Left`    |
-| Navigate Forward     | `Ctrl + Shift + -`     | `Alt + Right Arrow`    | `<C-i>`              | `Ctrl + Alt + Right`   |
-| Show Errors          | `Ctrl + Shift + M`     | `Ctrl + Shift + M`     | `<leader>cd`         | `Alt + 6`              |
-| Open Terminal        | `Ctrl + ~`             | `` Ctrl + ` ``         | `:term`              | `Alt + F12`            |
+| Format Document      | `Ctrl + K, Ctrl + D`   | `Shift + Alt + F`      | `<leader>cf`         | `Ctrl + Alt + L`        |
+| Quick Fix            | `Ctrl + .`             | `Ctrl + .`             | `<leader>ca`         | `Alt + Enter`           |
 
 
 
