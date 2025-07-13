@@ -217,6 +217,23 @@ Configurar o settings.json (CTRL + SHIFT + P) - Preferences - Open Settings:
     }  
 }
 ```
+
+## :white_check_mark: FFMPEG
+
+Join videos
+```powershell
+ffmpeg -f concat -safe 0 -i .\input.txt -c copy output.mp4
+```
+```text
+file '01.mp4'
+file '02.mp4'
+```
+
+Music + Video => Video_with_Music
+```powershell
+ffmpeg -i video.mp4 -i music.mp4 -map 0:v -map 1:a -c:v copy -c:a copy -shortest video_with_music.mp4
+```
+
 ## :white_check_mark: Abrir VS Code no MACOS pelo prompt:
 
 * Open the Command Palette (Ctrl+Shift+P) and type 'shell command' to find the Shell Command: 
