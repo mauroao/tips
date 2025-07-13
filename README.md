@@ -224,6 +224,7 @@ Join videos
 ```powershell
 ffmpeg -f concat -safe 0 -i .\input.txt -c copy output.mp4
 ```
+input.txt
 ```text
 file '01.mp4'
 file '02.mp4'
