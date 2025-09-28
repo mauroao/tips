@@ -112,7 +112,7 @@ sudo chmod -R a+rw /path/to/folder
  
 | Comando          | Linux / Mac            | cmd or Powershell       |
 |------------------|------------------------|-------------------------|
-| AND operator     | `&&`                   | `&&`                    |
+| AND operator     | `&&`                   | `&&`  `;`               |
 | Line Break       | `\`                    | `^` (cmd), \` (ps)      |
 | Exibir caminho   | `which`                | `where`                 |
 | Localizar arquivo| `find ./ -iname "*teste*"` | `dir -Recurse teste.txt` |
