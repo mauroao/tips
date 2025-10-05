@@ -103,11 +103,11 @@ sudo chmod -R a+rw /path/to/folder
 ## :white_check_mark: Comandos de Terminal em Windows e Linux
 
 
-| ENV vars         | Mac                     | Linux                   | PowerShell             |
-|------------------|------------------------|-------------------------|------------------------|
-| Show all         | `echo $ENV`            | `printenv`              | `dir env:`             |
-| Show one         | `echo $ENV_VAR`        | `echo $ENV_VAR`         | `dir env:JAVA_HOME`    |
-| Add new          | `export NEW_VAR=value` | `export NEW_VAR=value`  | `$env:NEW_VAR = "value"` |
+| Environment variables | Mac                    | Linux                   | PowerShell               |
+|-----------------------|------------------------|-------------------------|--------------------------|
+| Show all              | `echo $ENV`            | `printenv`              | `dir env:`               |
+| Show one              | `echo $JAVA_HOME`      | `echo $JAVA_HOME`       | `dir env:JAVA_HOME`      |
+| Add new               | `export NEW_VAR=value` | `export NEW_VAR=value`  | `$env:NEW_VAR = "value"` |
  
  
 | Comando          | Linux / Mac            | cmd or Powershell       |
