@@ -103,12 +103,12 @@ sudo chmod -R a+rw /path/to/folder
 ## :white_check_mark: Comandos de Terminal em Windows e Linux
 
 
-| System          | Show all environment variables   | Show one environment variable               | Add new environment variables                                  |
-|-----------------|----------------------------------|---------------------------------------------|----------------------------------------------------------------|
-| **Linux**       | `printenv` or `env`              | `echo $JAVA_HOME` or `printenv JAVA_HOME`   | `export NEW_VAR=value`                                         |
-| **Mac**         | `printenv` or `env`              | `echo $JAVA_HOME` or `printenv JAVA_HOME`   | `export NEW_VAR=value`                                         |
-| **PowerShell**  | `dir env:` or `gci env:`         | `$env:JAVA_HOME` or `dir env:JAVA_HOME`     | `$env:NEW_VAR="value"` (session) or `[Environment]::SetEnvironmentVariable("NEW_VAR","value","User")` |
-| **Windows CMD** | `set` or `set | find "JAVA"`     | `echo %JAVA_HOME%`                          | `set NEW_VAR=value` (session) or `setx NEW_VAR value` (persistent) |
+| System          | Show all environment variables   | Show one environment variable               | Add new environment variables     |
+|-----------------|----------------------------------|---------------------------------------------|-----------------------------------|
+| **Linux**       | `printenv` or `env`              | `echo $JAVA_HOME` or `printenv JAVA_HOME`   | `export NEW_VAR=value`            |
+| **Mac**         | `printenv` or `env`              | `echo $JAVA_HOME` or `printenv JAVA_HOME`   | `export NEW_VAR=value`            |
+| **PowerShell**  | `dir env:` or `gci env:`         | `$env:JAVA_HOME` or `dir env:JAVA_HOME`     | `$env:NEW_VAR="value"` (session)  |
+| **Windows CMD** | `set` or `set | find "JAVA"`     | `echo %JAVA_HOME%`                          | `set NEW_VAR=value` (session)     |
 
  
  
