@@ -106,8 +106,8 @@ sudo chmod -R a+rw /path/to/folder
 | System          | Show all environment variables   | Show one environment variable               | Add new environment variables     |
 |-----------------|----------------------------------|---------------------------------------------|-----------------------------------|
 | **Linux/Mac**   | `printenv` or `env`              | `echo $JAVA_HOME` or `printenv JAVA_HOME`   | `export NEW_VAR=value`            |
-| **PowerShell**  | `dir env:` or `gci env:`         | `$env:JAVA_HOME` or `dir env:JAVA_HOME`     | `$env:NEW_VAR="value"` (session)  |
-| **Windows CMD** | `set` or `set | find "JAVA"`     | `echo %JAVA_HOME%`                          | `set NEW_VAR=value` (session)     |
+| **PowerShell**  | `dir env:` or `gci env:`         | `$env:JAVA_HOME` or `dir env:JAVA_HOME`     | `$env:NEW_VAR="value"`            |
+| **Windows CMD** | `set` or `set | find "JAVA"`     | `echo %JAVA_HOME%`                          | `set NEW_VAR=value`               |
 
  
  
